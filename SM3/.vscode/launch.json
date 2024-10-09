@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Kalkulator",
+      "request": "launch",
+      "mainClass": "praktikum.sesi1.Kalkulator",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "OperatorLogika",
+      "request": "launch",
+      "mainClass": "praktikum.sesi3.OperatorLogika",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/root/perkuliahan/Kuliah/SM3/pbo",
+      "program": "/root/perkuliahan/Kuliah/SM3/pbo/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
