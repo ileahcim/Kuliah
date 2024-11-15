@@ -1,0 +1,26 @@
+@startuml
+
+start
+
+:User Mengakses Aplikasi;
+:Menampilkan Halaman Utama;
+
+if (Apakah User Memilih Menu Tambah Barang?) then (yes)
+  :Tampilkan Form Input Barang;
+else (no)
+  :Tampilkan Daftar Barang;
+endif
+
+:User Mengisi Data Barang;
+:User Memilih Kategori dan Mengisi Detail Barang;
+
+if (Apakah Kode Barang Unik dan Data Valid?) then (yes)
+  :Simpan Data Barang ke Database;
+  :Tampilkan Pesan Sukses - Barang Ditambahkan;
+else (no)
+  :Tampilkan Pesan Error - Data Tidak Valid;
+endif
+
+stop
+
+@enduml

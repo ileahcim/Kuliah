@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CalculatorMain",
+      "request": "launch",
+      "mainClass": "praktikum.sesi6.latihan.CalculatorMain",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "ClassBintangFilm",
+      "request": "launch",
+      "mainClass": "praktikum.sesi6.latihan.ClassBintangFilm",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "ClassMobil",
+      "request": "launch",
+      "mainClass": "praktikum.sesi6.latihan.ClassMobil",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "MieAyam",
+      "request": "launch",
+      "mainClass": "praktikum.sesi6.MieAyam",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "BerhentiJikaNol",
+      "request": "launch",
+      "mainClass": "praktikum.sesi5.BerhentiJikaNol",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "Aritmatika",
+      "request": "launch",
+      "mainClass": "praktikum.sesi3.Aritmatika",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "hello",
+      "request": "launch",
+      "mainClass": "praktikum.sesi6.hello",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
       "name": "Kalkulator",
       "request": "launch",
       "mainClass": "praktikum.sesi1.Kalkulator",

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor Admin
+actor User
+
+rectangle "Sistem Data Barang" {
+    usecase "Tambah Barang" as UC_Tambah
+    usecase "Hapus Barang" as UC_Hapus
+    usecase "Update Barang" as UC_Update
+    usecase "Lihat Daftar Barang" as UC_LihatDaftar
+    usecase "Lihat Detail Barang" as UC_LihatDetail
+}
+
+Admin --> UC_Tambah
+Admin --> UC_Hapus
+Admin --> UC_Update
+User --> UC_LihatDaftar
+User --> UC_LihatDetail
+
+@enduml
