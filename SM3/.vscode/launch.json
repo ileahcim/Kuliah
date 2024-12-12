@@ -3,6 +3,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DiskonPembelian",
+      "request": "launch",
+      "mainClass": "praktikum.sesi4.DiskonPembelian",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "praktikum.sesi11.Pegawai.Main",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "praktikum.sesi8.Main",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "VehicleTester",
+      "request": "launch",
+      "mainClass": "praktikum.sesi9.VehicleTester",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "AnimalTester",
+      "request": "launch",
+      "mainClass": "praktikum.sesi9.AnimalTester",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "praktikum.sesi9.Main",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "praktikum.sesi9.pegawai.Main",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "praktikum.sesi8.main",
+      "projectName": "SM3_5485cf8d"
+    },
+    {
+      "type": "java",
       "name": "CalculatorMain",
       "request": "launch",
       "mainClass": "praktikum.sesi6.latihan.CalculatorMain",

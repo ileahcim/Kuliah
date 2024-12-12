@@ -1,0 +1,66 @@
+@startuml
+left to right direction
+actor "Pelanggan" as Pelanggan
+actor "Kepala Bagian Penjualan" as KepalaBagian
+
+rectangle "Sistem Penjualan PT Nusantara" {
+    actor "Bagian Penjualan" as BagianPenjualan
+    
+    usecase "Menerima Surat Pesanan" as UC1
+    usecase "Mencatat dan Merekam Pesanan" as UC2
+    usecase "Membuat Faktur dan Surat Jalan" as UC3
+    usecase "Mengirim Faktur dan Surat Jalan" as UC4
+    usecase "Menerima Pembayaran" as UC5
+    usecase "Membuat Kwitansi" as UC6
+    usecase "Mengirim Kwitansi" as UC7
+    usecase "Membuat Laporan Penjualan" as UC8
+    usecase "Membuat Laporan Pesanan" as UC9
+    usecase "Membuat Laporan Pengiriman" as UC10
+
+    package "Arsip Surat Pesanan" {
+        usecase "Detail Pelanggan" as Arsip1
+        usecase "Detail Pesanan" as Arsip2
+        usecase "Pengiriman" as Arsip3
+    }
+
+    package "Arsip Faktur & Surat Jalan" {
+        usecase "Nomor Faktur" as Arsip4
+        usecase "Tanggal Faktur" as Arsip5
+        usecase "Total Pembayaran" as Arsip6
+        usecase "Status Pengiriman" as Arsip7
+    }
+
+    package "Arsip Kwitansi" {
+        usecase "Nomor Kwitansi" as Arsip8
+        usecase "Tanggal Kwitansi" as Arsip9
+        usecase "Jumlah Pembayaran" as Arsip10
+        usecase "Status Pembayaran" as Arsip11
+    }
+}
+
+Pelanggan --> UC1 : "Mengirim Surat Pesanan"
+UC1 --> UC2 : "Mencatat Surat Pesanan"
+UC2 --> Arsip1 : "Menyimpan Detail Pelanggan"
+UC2 --> Arsip2 : "Menyimpan Detail Pesanan"
+
+UC2 --> UC3 : "Membuat Faktur dan Surat Jalan"
+UC3 --> Arsip4 : "Simpan Nomor Faktur"
+UC3 --> Arsip5 : "Simpan Tanggal Faktur"
+UC3 --> Arsip7 : "Simpan Status Pengiriman"
+UC3 --> UC4 : "Mengirim Faktur dan Surat Jalan ke Pelanggan"
+
+Pelanggan --> UC5 : "Mengirim Pembayaran"
+UC5 --> UC6 : "Membuat Kwitansi"
+UC6 --> Arsip8 : "Simpan Nomor Kwitansi"
+UC6 --> Arsip9 : "Simpan Tanggal Kwitansi"
+UC6 --> Arsip10 : "Simpan Jumlah Pembayaran"
+UC6 --> UC7 : "Mengirim Kwitansi ke Pelanggan"
+
+BagianPenjualan --> UC8 : "Membuat Laporan Penjualan"
+BagianPenjualan --> UC9 : "Membuat Laporan Pesanan"
+BagianPenjualan --> UC10 : "Membuat Laporan Pengiriman"
+
+UC8 --> KepalaBagian : "Mengirim Laporan Penjualan"
+UC9 --> KepalaBagian : "Mengirim Laporan Pesanan"
+UC10 --> KepalaBagian : "Mengirim Laporan Pengiriman"
+@enduml
