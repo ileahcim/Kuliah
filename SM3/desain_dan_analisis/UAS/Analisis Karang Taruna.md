@@ -90,6 +90,8 @@ Kegiatan -- Keuangan : "1" -- "N"
 
 @enduml
 ```
+**Output**:  
+![ERD](https://github.com/ileahcim/Kuliah/blob/main/SM3/desain_dan_analisis/UAS/Desain/ERD.png) 
 
 ### *6.2. Use Case Diagram*
 
@@ -114,32 +116,56 @@ Member --> U5
 Admin --> U5
 @enduml
 ```
+**Output**:  
+![Use Case](https://github.com/ileahcim/Kuliah/blob/main/SM3/desain_dan_analisis/UAS/Desain/Usecase.png) 
 
 ### *6.3. Flowchart*
 
 ```puml
 @startuml
 
+' Flowchart - Pendaftaran dan Manajemen Keanggotaan Karang Taruna
 start
-:Anggota mendaftar;
-if (Data valid?) then (Ya)
-    :Simpan data anggota;
-    :Tampilkan dashboard;
+:Pengguna mengakses sistem;
+if (Apakah pengguna sudah memiliki akun?) then (Ya)
+    :Login ke sistem;
 else (Tidak)
-    :Tampilkan pesan error;
+    :Mendaftar sebagai anggota;
+    if (Data valid?) then (Ya)
+        :Simpan data anggota;
+        :Tampilkan dashboard anggota;
+    else (Tidak)
+        :Tampilkan pesan error;
+        stop
+    endif
 endif
 
-:Pengurus membuat kegiatan;
-if (Kegiatan disetujui?) then (Ya)
-    :Jadwalkan dan publikasikan;
-    :Update laporan keuangan;
+:Anggota memilih kegiatan yang tersedia;
+if (Apakah anggota memenuhi syarat untuk mengikuti kegiatan?) then (Ya)
+    :Daftar ke kegiatan;
+    :Data pendaftaran disimpan;
+    :Admin memverifikasi pendaftaran;
 else (Tidak)
-    :Revisi kegiatan;
+    :Tampilkan notifikasi tidak memenuhi syarat;
+endif
+
+:Admin menyusun jadwal kegiatan;
+:Admin mengirimkan notifikasi ke anggota;
+:Anggota mengikuti kegiatan sesuai jadwal;
+:Admin mencatat kehadiran anggota;
+
+if (Apakah kegiatan selesai?) then (Ya)
+    :Admin melakukan evaluasi kegiatan;
+    :Data evaluasi disimpan;
+else (Tidak)
+    :Kegiatan berlanjut;
 endif
 
 stop
 @enduml
 ```
+**Output**: 
+![Flowchaart](https://github.com/ileahcim/Kuliah/blob/main/SM3/desain_dan_analisis/UAS/Desain/Flowchrt.png) 
 
 ### *6.4. Implementasi Database (SQL)*
 
