@@ -1,0 +1,43 @@
+@startuml
+
+start
+:Pengguna mengakses sistem;
+if (Sudah punya akun?) then (Ya)
+  :Login ke sistem;
+else (Tidak)
+  :Mendaftar sebagai anggota;
+  if (Data valid?) then (Ya)
+    :Simpan data anggota;
+    :Tampilkan dashboard anggota;
+  else (Tidak)
+    :Tampilkan pesan error;
+    stop
+  endif
+endif
+
+:Anggota melihat daftar kegiatan;
+if (Ingin mendaftar kegiatan?) then (Ya)
+  :Pilih kegiatan;
+  if (Memenuhi syarat?) then (Ya)
+    :Daftar ke kegiatan;
+    :Simpan data pendaftaran;
+    :Admin memverifikasi pendaftaran;
+  else (Tidak)
+    :Tampilkan notifikasi tidak memenuhi syarat;
+  endif
+endif
+
+:Admin mengelola jadwal kegiatan;
+:Admin mengirimkan notifikasi ke anggota;
+:Anggota mengikuti kegiatan sesuai jadwal;
+:Admin mencatat kehadiran anggota;
+
+if (Kegiatan selesai?) then (Ya)
+  :Admin membuat laporan kegiatan;
+  :Simpan laporan;
+else (Tidak)
+  :Kegiatan masih berlangsung;
+endif
+
+stop
+@enduml
