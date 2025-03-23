@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #34495e;
+            padding-left: 10px;
+            transition: 0.3s;
+        }
+
+        /* Main Content Styles */
+        .content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            color: #34495e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: white;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="#data-klien">Data Klien</a></li>
+            <li><a href="#data-paket">Data Paket</a></li>
+            <li><a href="#data-karyawan">Data Karyawan</a></li>
+            <li><a href="#data-kurir">Data Kurir</a></li>
+            <li><a href="#data-pengiriman">Data Pengiriman</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Data Klien -->
+        <section id="data-klien">
+            <h1>Data Klien</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Klien</th>
+                        <th>Nama Klien</th>
+                        <th>Alamat</th>
+                        <th>Email</th>
+                        <th>Nomor Telepon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Reza</td>
+                        <td>Jl. Sudirman</td>
+                        <td>reza@gmail.com</td>
+                        <td>08123456789</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Sukijad</td>
+                        <td>Jl. Gardenia</td>
+                        <td>sukijad@gmail.com</td>
+                        <td>08234567890</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Data Paket -->
+        <section id="data-paket">
+            <h1>Data Paket</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor Resi</th>
+                        <th>Nama Pengirim</th>
+                        <th>Alamat Pengirim</th>
+                        <th>Nama Penerima</th>
+                        <th>Alamat Tujuan</th>
+                        <th>Jenis Paket</th>
+                        <th>Berat Paket</th>
+                        <th>Status Pengiriman</th>
+                        <th>Tanggal Pengiriman</th>
+                        <th>Tanggal Estimasi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>031980839</td>
+                        <td>Reza</td>
+                        <td>Jl. Sudirman</td>
+                        <td>Nichol</td>
+                        <td>Jl. Kelapa Gading</td>
+                        <td>Dokumen</td>
+                        <td>1 kg</td>
+                        <td>Dikirim</td>
+                        <td>10-01-2025</td>
+                        <td>12-01-2025</td>
+                    </tr>
+                    <tr>
+                        <td>029182372</td>
+                        <td>Sukijad</td>
+                        <td>Jl. Gardenia</td>
+                        <td>Hasim</td>
+                        <td>Jl. Pejawan</td>
+                        <td>Pakaian</td>
+                        <td>2 kg</td>
+                        <td>Diproses</td>
+                        <td>09-01-2025</td>
+                        <td>11-01-2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Data Karyawan -->
+        <section id="data-karyawan">
+            <h1>Data Karyawan</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Karyawan</th>
+                        <th>Nama Karyawan</th>
+                        <th>Jabatan</th>
+                        <th>Email</th>
+                        <th>Nomor Telepon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Andi</td>
+                        <td>Admin</td>
+                        <td>andi@perusahaan.com</td>
+                        <td>08123456788</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Sinta</td>
+                        <td>Finance</td>
+                        <td>sinta@perusahaan.com</td>
+                        <td>08234567889</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Data Kurir -->
+        <section id="data-kurir">
+            <h1>Data Kurir</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Kurir</th>
+                        <th>Nama Kurir</th>
+                        <th>Plat Nomor</th>
+                        <th>Wilayah</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>201</td>
+                        <td>Budi</td>
+                        <td>AB 1234 CD</td>
+                        <td>Jakarta Selatan</td>
+                        <td>Aktif</td>
+                    </tr>
+                    <tr>
+                        <td>202</td>
+                        <td>Dian</td>
+                        <td>DE 5678 FG</td>
+                        <td>Jakarta Utara</td>
+                        <td>Aktif</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Data Pengiriman -->
+        <section id="data-pengiriman">
+            <h1>Data Pengiriman</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor Resi</th>
+                        <th>Nama Kurir</th>
+                        <th>Status Pengiriman</th>
+                        <th>Tanggal Kirim</th>
+                        <th>Tanggal Selesai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>031980839</td>
+                        <td>Budi</td>
+                        <td>Dikirim</td>
+                        <td>10-01-2025</td>
+                        <td>12-01-2025</td>
+                    </tr>
+                    <tr>
+                        <td>029182372</td>
+                        <td>Dian</td>
+                        <td>Diproses</td>
+                        <td>09-01-2025</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

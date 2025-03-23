@@ -1,16 +1,15 @@
-package praktikum.sesi9;
+package praktikum.sesi9.pegawai;
 
 public class Pelayan extends Pegawai {
     @Override
-    public void menampilkan()
-    {
-        System.out.println("Nama : "+nama);
-        System.out.println("Id_Pegawai : "+id_pegawai);
-        System.out.println("Gaji : "+gaji);
+    public void menampilkan() {
+        System.out.println("Nama : " + nama);
+        System.out.println("Id Pegawai : " + id_pegawai);
+        System.out.println("Gaji : " + gaji);
     }
-    
-    public void tugas(){
+
+    public void tugas() {
         System.out.println("Tugas : Melayani dan Menyajikan pesanan pembeli");
-        System.out.println("------------------s----------------------------------");
+        System.out.println("------------------------------");
     }
 }

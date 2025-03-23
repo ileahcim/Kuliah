@@ -1,8 +1,9 @@
-package praktikum.sesi9;
+package praktikum.sesi9.pegawai;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        // Membuat objek untuk setiap subclass
+        //membuat sebuah object
+        //"pegawai" merupakan class, lalu "Pegawai" merupakan objek yang akan dibuat, lalu "new pegawai();" merupakan constructor.
         Pegawai Pegawai = new Pegawai();
         Manager Manager = new Manager();
         Kasir Kasir = new Kasir();
@@ -10,30 +11,31 @@ public class Main {
         Pelayan Pelayan = new Pelayan();
         Satpam Satpam = new Satpam();
 
-        // Mengisi data untuk setiap objek
-        Manager.nama = "Sifa";
+        //memasukkan nilai variabel menggunakan objek.
+        Manager.nama = "sifa";
         Manager.id_pegawai = 1;
-        Manager.gaji = "Rp. 10.000.000";
+        Manager.gaji = "7 Juta";
 
         Kasir.nama = "Aldi";
         Kasir.id_pegawai = 2;
-        Kasir.gaji = "Rp. 5.000.000";
+        Kasir.gaji = "1,2 Juta";
 
-        Koki.nama = "Rizky";
+        Koki.nama = "Reza";
         Koki.id_pegawai = 3;
-        Koki.gaji = "Rp. 7.000.000";
+        Koki.gaji = "2 Juta";
 
-        Pelayan.nama = "Rizal";
+        Pelayan.nama = "Dean";
         Pelayan.id_pegawai = 4;
-        Pelayan.gaji = "Rp. 6.000.000";
+        Pelayan.gaji = "1,2 Juta";
 
-        Satpam.nama = "Iqbal";
-        Satpam.id_pegawai = 5;
-        Satpam.gaji = "Rp. 4.000.000";
+        Satpam.nama = "Aldi";
+        Satpam.id_pegawai = 2;
+        Satpam.gaji = "1 Juta";
 
-        // Memanggil metode untuk setiap objek
+        //nilai tersebut akan dimasukkan kedalam variabel yang ada pada superclass.
+        //memanggil fungsi pada superclass
         Pegawai.menampilkan();
-
+        //memanggil nilai variabel pada superclass dan memasukkannya kedalam fungsi yang ada pada class;
         Manager.menampilkan();
         Manager.tugas();
 
@@ -48,5 +50,7 @@ public class Main {
 
         Satpam.menampilkan();
         Satpam.tugas();
+
     }
 }
+
