@@ -1,0 +1,10 @@
+<div>
+    @include('partials.head')
+    @include('partials.nav')
+    @include('partials.hero')
+    @include('partials.about')
+    @include('partials.layanan')
+    @include('partials.contact')
+    @include('partials.footer')
+    @include('partials.script')
+</div>
