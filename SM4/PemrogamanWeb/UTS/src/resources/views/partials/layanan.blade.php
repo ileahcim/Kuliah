@@ -19,4 +19,40 @@
             </div>
         </div>
     </div>
+
+    <div class="row gx-0 justify-content-center">
+    <div class="col-lg-10">
+        <div class="bg-white rounded shadow-sm p-4 mt-4">
+            <h5 class="mb-4 text-center">Jadwal Layanan Puskesmas</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Hari</th>
+                            <th>Jam Buka</th>
+                            <th>Layanan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Senin - Jumat</td>
+                            <td>08:00 - 14:00</td>
+                            <td>Pemeriksaan Umum, Imunisasi, Konsultasi</td>
+                        </tr>
+                        <tr>
+                            <td>Sabtu</td>
+                            <td>08:00 - 12:00</td>
+                            <td>Pemeriksaan Umum & Rujukan</td>
+                        </tr>
+                        <tr>
+                            <td>Minggu / Libur</td>
+                            <td colspan="2">Tutup</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 </section>
